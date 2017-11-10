@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Change Calculator</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div>
+    <h1 class="ml-5">Change Calculator</h1>
+
+    <form id="form-input">
+      <div class="row mx-3">
+        <div class="form-group col-md-5">
+          <label for="amount-due" class="form-control-label">
+            <b>How much is due for the sale?</b>
+          </label>
+          <input id="amount-due" class="form-control border border-dark" type="text" placeholder="Enter Sale Total Here">
+        </div>
+        <div class="form-group col-md-5">
+          <label for="amount-received" class="form-control-label">
+            <b>How much has the customer given you?</b>
+          </label>
+          <input id="amount-received" class="form-control border border-dark" type="text" placeholder="Enter Amount Given Here">
+        </div>
+        <div class="form-group col-md-2 align-self-end">
+          <button id="calculate-change" type="reset" value="0" class="btn btn-primary btn-block">Change</button>
+        </div>
+      </div>
+    </form>
+    <!-- end of div form-input -->
+    <div id="more-dollars" class="row mt-5 background">
+      <div class="col-4 mt-5 border border-dark rounded bg-info">
+        <p class="h2 text-center font-weight-bold">Total Change</p>
+        <p id="total-output" class="h4 text-center">0</p>
+      </div>
+      <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
+        <p class="h3 text-center font-weight-bold">$10 Bills</p>
+        <p id="dollars10-output" class="text-center">0</p>
+      </div>
+      <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
+        <p class="h3 text-center font-weight-bold">$20 Bills</p>
+        <p id="dollars20-output" class="text-center">0</p>
+      </div>
+    </div>
+    <div id="dollars-div" class="row mt-5">
+      <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
+        <p class="h3 text-center font-weight-bold">$1 Bills</p>
+        <p id="dollars-output" class="text-center">0</p>
+      </div>
+      <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
+        <p class="h3 text-center font-weight-bold">$2 Bills</p>
+        <p id="dollars2-output" class="text-center">0</p>
+      </div>
+      <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
+        <p class="h3 text-center font-weight-bold">$5 Bills</p>
+        <p id="dollars5-output" class="text-center">0</p>
+      </div>
+    </div>
+    <!-- end of dollars-div -->
+    <div id="change-div" class="row mt-5">
+      <div class="col-6 col-md-3 mt-5 bg-secondary border border-dark rounded-circle">
+        <p class="h4 text-center font-weight-bold">Quarters</p>
+        <img src="http://rs1126.pbsrc.com/albums/l609/ahipol/quarter-2-textures1.gif?w=280&h=210&fit=crop" alt="spinning quarter" style="width:280px;height:210px;">
+        <p id="quarters-output" class="text-center">0</p>
+      </div>
+      <div class="col-6 col-md-3 mt-5 bg-secondary border border-dark rounded-circle">
+        <p class="h4 text-center font-weight-bold">Dimes</p>
+        <p id="dimes-output" class="text-center">0</p>
+      </div>
+      <div class="col-6 col-md-3 mt-5 bg-secondary border border-dark rounded-circle">
+        <p class="h4 text-center font-weight-bold">Nickels</p>
+        <p id="nickels-output" class="text-center">0</p>
+      </div>
+      <div class="col-6 col-md-3 mt-5 bg-warning border border-dark rounded-circle">
+        <p class="h4 text-center font-weight-bold">Pennies</p>
+        <p id="pennies-output" class="text-center">0</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
