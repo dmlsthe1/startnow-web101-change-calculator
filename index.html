@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Change Calculator</title>
+  
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
@@ -13,7 +14,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="no-bg">
   <div>
     <h1 class="ml-5">Change Calculator</h1>
 
@@ -23,13 +24,13 @@
           <label for="amount-due" class="form-control-label">
             <b>How much is due for the sale?</b>
           </label>
-          <input id="amount-due" class="form-control border border-dark" type="text" placeholder="Enter Sale Total Here">
+          <input id="amount-due" class="form-control border border-dark" type="number" placeholder="Enter Sale Total Here">
         </div>
         <div class="form-group col-md-5">
           <label for="amount-received" class="form-control-label">
             <b>How much has the customer given you?</b>
           </label>
-          <input id="amount-received" class="form-control border border-dark" type="text" placeholder="Enter Amount Given Here">
+          <input id="amount-received" class="form-control border border-dark" type="number" placeholder="Enter Amount Given Here">
         </div>
         <div class="form-group col-md-2 align-self-end">
           <button id="calculate-change" type="reset" value="0" class="btn btn-primary btn-block">Change</button>
@@ -37,52 +38,53 @@
       </div>
     </form>
     <!-- end of div form-input -->
-    <div id="more-dollars" class="row mt-5 background">
-      <div class="col-4 mt-5 border border-dark rounded bg-info">
-        <p class="h2 text-center font-weight-bold">Total Change</p>
-        <p id="total-output" class="h4 text-center">0</p>
+    <div class="px-3">
+      <div id="more-dollars" class="row mt-5 background">
+        <div class="col-4 mt-5 border border-dark rounded bg-info">
+          <p class="h2 text-center font-weight-bold">Total Change</p>
+          <p id="total-output" class="h4 text-center">0</p>
+        </div>
+        <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
+          <p class="h3 text-center font-weight-bold">$10 Bills</p>
+          <p id="dollars10-output" class="text-center">0</p>
+        </div>
+        <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
+          <p class="h3 text-center font-weight-bold">$20 Bills</p>
+          <p id="dollars20-output" class="text-center">0</p>
+        </div>
       </div>
-      <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
-        <p class="h3 text-center font-weight-bold">$10 Bills</p>
-        <p id="dollars10-output" class="text-center">0</p>
+      <div id="dollars-div" class="row mt-5">
+        <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
+          <p class="h3 text-center font-weight-bold">$1 Bills</p>
+          <p id="dollars-output" class="text-center">0</p>
+        </div>
+        <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
+          <p class="h3 text-center font-weight-bold">$2 Bills</p>
+          <p id="dollars2-output" class="text-center">0</p>
+        </div>
+        <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
+          <p class="h3 text-center font-weight-bold">$5 Bills</p>
+          <p id="dollars5-output" class="text-center">0</p>
+        </div>
       </div>
-      <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
-        <p class="h3 text-center font-weight-bold">$20 Bills</p>
-        <p id="dollars20-output" class="text-center">0</p>
-      </div>
-    </div>
-    <div id="dollars-div" class="row mt-5">
-      <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
-        <p class="h3 text-center font-weight-bold">$1 Bills</p>
-        <p id="dollars-output" class="text-center">0</p>
-      </div>
-      <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
-        <p class="h3 text-center font-weight-bold">$2 Bills</p>
-        <p id="dollars2-output" class="text-center">0</p>
-      </div>
-      <div class="col-4 mt-5 border border-dark rounded-circle bg-success">
-        <p class="h3 text-center font-weight-bold">$5 Bills</p>
-        <p id="dollars5-output" class="text-center">0</p>
-      </div>
-    </div>
-    <!-- end of dollars-div -->
-    <div id="change-div" class="row mt-5">
-      <div class="col-6 col-md-3 mt-5 bg-secondary border border-dark rounded-circle">
-        <p class="h4 text-center font-weight-bold">Quarters</p>
-        <img src="http://rs1126.pbsrc.com/albums/l609/ahipol/quarter-2-textures1.gif?w=280&h=210&fit=crop" alt="spinning quarter" style="width:280px;height:210px;">
-        <p id="quarters-output" class="text-center">0</p>
-      </div>
-      <div class="col-6 col-md-3 mt-5 bg-secondary border border-dark rounded-circle">
-        <p class="h4 text-center font-weight-bold">Dimes</p>
-        <p id="dimes-output" class="text-center">0</p>
-      </div>
-      <div class="col-6 col-md-3 mt-5 bg-secondary border border-dark rounded-circle">
-        <p class="h4 text-center font-weight-bold">Nickels</p>
-        <p id="nickels-output" class="text-center">0</p>
-      </div>
-      <div class="col-6 col-md-3 mt-5 bg-warning border border-dark rounded-circle">
-        <p class="h4 text-center font-weight-bold">Pennies</p>
-        <p id="pennies-output" class="text-center">0</p>
+      <!-- end of dollars-div -->
+      <div id="change-div" class="row mt-5">
+        <div class="col-6 col-md-3 mt-5 border border-dark rounded-circle">
+          <p class="h4 text-center font-weight-bold">Quarters</p>
+          <p id="quarters-output" class="text-center">0</p>
+        </div>
+        <div class="col-6 col-md-3 mt-5 border border-dark rounded-circle">
+          <p class="h4 text-center font-weight-bold">Dimes</p>
+          <p id="dimes-output" class="text-center">0</p>
+        </div>
+        <div class="col-6 col-md-3 mt-5 border border-dark rounded-circle">
+          <p class="h4 text-center font-weight-bold">Nickels</p>
+          <p id="nickels-output" class="text-center">0</p>
+        </div>
+        <div class="col-6 col-md-3 mt-5 px-2 border border-dark rounded-circle">
+          <p class="h4 text-center font-weight-bold">Pennies</p>
+          <p id="pennies-output" class="text-center">0</p>
+        </div>
       </div>
     </div>
   </div>
